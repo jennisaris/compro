@@ -7,6 +7,7 @@ use App\Models\AboutUs;
 use App\Models\Service;
 use App\Models\ContactInfo;
 use App\Models\ContactMessage;
+use App\Models\Team;
 
 
 class HomeController extends Controller
@@ -17,6 +18,7 @@ class HomeController extends Controller
             'hero' => HeroSection::all(),
             'about' => AboutUs::all(),
             'services' => Service::all(),
+            'teams' => Team::all(),
             'contactInfo' => ContactInfo::first(),
         ]);
     }
