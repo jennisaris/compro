@@ -14,8 +14,8 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'hero' => HeroSection::first(),
-            'about' => AboutUs::first(),
+            'hero' => HeroSection::all(),
+            'about' => AboutUs::all(),
             'services' => Service::all(),
             'contactInfo' => ContactInfo::first(),
         ]);

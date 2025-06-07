@@ -2,21 +2,25 @@
 
 @section('content')
     {{-- Hero Section --}}
+    @foreach($hero as $heroItem)
     <section id="home" class="hero-gradient text-white py-32 text-center">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">{{ $hero->title }}</h1>
-            <p class="text-lg md:text-xl mb-6 fade-in">{{ $hero->subtitle }}</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">{{ $heroItem->title }}</h1>
+            <p class="text-lg md:text-xl mb-6 fade-in">{{ $heroItem->subtitle }}</p>
             <a href="#services" class="bg-white text-blue-600 font-semibold py-3 px-6 rounded-full shadow hover:bg-gray-100 fade-in">Lihat Layanan</a>
         </div>
     </section>
+    @endforeach
 
     {{-- About Us Section --}}
+    @foreach($about as $aboutItem)
     <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Tentang Kami</h2>
-            <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">{{ $about->content }}</p>
+            <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">{{ $aboutItem->content }}</p>
         </div>
     </section>
+    @endforeach
 
     {{-- Services Section --}}
     <section id="services" class="py-20">
