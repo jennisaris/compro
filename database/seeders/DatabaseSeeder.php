@@ -12,6 +12,8 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        $this->call(UserSeeder::class);
+
         DB::table('hero_sections')->insert([
             'title' => 'Selamat Datang di NexaCore',
             'subtitle' => 'Kami membangun solusi digital terbaik untuk masa depan Anda.',
